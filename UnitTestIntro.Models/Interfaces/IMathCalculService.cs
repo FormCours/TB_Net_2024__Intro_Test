@@ -8,6 +8,9 @@
         public double Addition(double nb1, double nb2);
         public double Addition(double nb1, double nb2, params double[] nbs);
 
+        public double Division(int nb1, int nb2);
+        public double Division(double nb1, double nb2);
+
     }
 }
 
