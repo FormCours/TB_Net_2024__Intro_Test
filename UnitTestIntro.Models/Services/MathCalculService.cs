@@ -68,6 +68,11 @@ namespace UnitTestIntro.Models.Services
 
         public double Division(double nb1, double nb2)
         {
+            if(nb2 == 0)
+            {
+                throw new MathCalculDivByZeroException();
+            }
+
             double result = nb1 / nb2;
             return Math.Round(result, 2); ;
         }

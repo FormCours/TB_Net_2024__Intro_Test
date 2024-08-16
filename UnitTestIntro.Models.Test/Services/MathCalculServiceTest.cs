@@ -122,6 +122,21 @@ namespace UnitTestIntro.Models.Test.Services
             // Assert
             Assert.Equal(expected, actual);
         }
+
+        [Fact]
+        public void Division_ByZero_ThrowsException()
+        {
+            // Arrange
+            IMathCalculService mathCalculService = new MathCalculService();
+            double nb1 = 42.0;
+            double nb2 = 0;
+
+            // Action + Assert
+            Assert.Throws<MathCalculDivByZeroException>(() =>
+            {
+                double actual = mathCalculService.Division(nb1, nb2);
+            });
+        }
         #endregion
     }
 }
